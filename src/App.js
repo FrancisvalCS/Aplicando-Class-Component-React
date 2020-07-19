@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+/*Constantes*/
+class Equipe extends Component{
+    render(){
+        return(
+            <div>
+                <h2>Olá sou o(a) {this.props.nome}</h2>
+                <h3>Cargo: {this.props.cargo}</h3>
+                <h3>idade: {this.props.idade}</h3>
+            </div>
+        );
+    }
+}
+
+/*Funcção*/
+function App(){
+    return (
+        <div>
+            <h1>Conheça nossa equipe:</h1>
+            <Equipe nome="Metheus" cargo="Programador" idade="24"/>
+        </div>
+    );
 }
 
 export default App;
